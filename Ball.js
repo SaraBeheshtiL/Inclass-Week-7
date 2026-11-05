@@ -84,15 +84,15 @@ class WeirdBall extends Ball {
 
   respond(active) {
     if (active) {
-      this.sizeMultiplier = 5;
+      this.changeSize(5);
     } else {
       this.sizeMultiplier = 1;
     }
   }
 
   show() {
-    textSize(this.r * this.sizeMultiplier);
+    textSize(this.r * changeSize);
     noStroke();
-    text(this.emojiText, this.x, this.y, this.r * 2);
+    text(this.emojiText, this.x, this.y);
   }
 }
