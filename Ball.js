@@ -79,20 +79,20 @@ class WeirdBall extends Ball {
   constructor(x, y, fillColor, r) {
     super(x, y, fillColor, r);
     this.emojiText = "🥴";
-    this.sizeMultiplier = 5;
+    //this.sizeMultiplier = 5;
   }
 
   respond(active) {
     if (active) {
       this.changeSize(5);
     } else {
-      this.sizeMultiplier = 1;
+      this.r = 5;
     }
   }
 
   show() {
-    textSize(this.r * changeSize);
+    textSize(this.r);
     noStroke();
-    text(this.emojiText, this.x, this.y);
+    text(this.emojiText, this.x, this.y, this.fillColor);
   }
 }
